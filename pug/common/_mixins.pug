@@ -6,8 +6,8 @@ mixin iconPath(iconPath,iconName, iconClass)
   svg(class=`${iconClass}`)
     use(xlink:href=`${iconPath}/sprite.svg#${iconName}`)
 
-mixin image(imagePath, imageAlt, imageClass)
-  if imageAlt
+mixin image(imagePath, imageClass, imageAlt)
+  if !imageAlt
     - var alt = 'lorem'
   else
     - var alt = imageAlt
